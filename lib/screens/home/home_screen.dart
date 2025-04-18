@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/widgets/avatar.dart';
 import 'package:instagram_clone/widgets/post.dart';
@@ -12,7 +14,36 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 65,
+        title: Text(
+          "instagram",
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.add),
+          iconSize: 40,
+        ),
+        //titleSpacing: 0,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Image(
+              width: 30,
+              height: 30,
+              image: AssetImage("lib/assets/icons/heart.png"),
+            ),
+          ),
+          IconButton(onPressed: () {}, icon: Icon(weight: 30, Icons.send)),
+        ],
+      ),
+      body: Column(
         children: [
           Container(
             height: 100,
@@ -41,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ],
-      );
+      ),
+    );
   }
 }
