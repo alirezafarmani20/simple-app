@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/theme/theme.dart';
 import 'package:instagram_clone/screens/splash/splash_screen.dart';
 
 void main() {
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "instgram clone",
+      theme: lightTheme,
+      darkTheme: darkTheme,
       home: SplashScreen(),
     );
   }
