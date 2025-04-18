@@ -56,6 +56,20 @@ class _ExpelorScreenState extends State<ExpelorScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 12,),
+            Expanded(
+              child: GridView.builder(
+                itemCount: 100,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 2, 
+                  mainAxisSpacing: 2
+                ),
+                itemBuilder: (BuildContext context, int index) {
+                  return Image(image: AssetImage("lib/assets/images/onbg3.png"), fit: BoxFit.cover,);
+                },
+              ),
+            ),
           ],
         ),
       ),
