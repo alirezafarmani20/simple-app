@@ -14,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   int _index = 0;
-  List<Widget> _pages = [HomeScreen() ,ExpelorScreen() ];
+  final List<Widget> _pages = [HomeScreen() ,ExpelorScreen() ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
