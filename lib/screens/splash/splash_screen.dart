@@ -1,6 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/home/home_screen.dart';
 import 'package:instagram_clone/widgets/avatar.dart';
 import 'package:instagram_clone/widgets/post.dart';
 
@@ -86,36 +87,7 @@ class _SplashScreenState extends State<SplashScreen> {
           IconButton(onPressed: () {}, icon: Icon(weight: 30, Icons.send)),
         ],
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 100,
-            child: Padding(
-              padding: EdgeInsets.only(left: 7, right: 7, top: 12),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 12,
-                itemBuilder: (context, index) {
-                  return Avatar();
-                },
-              ),
-            ),
-          ),
-          Expanded(
-            child: ListView.separated(
-              padding: EdgeInsets.only(top: 12),
-              itemCount: 20,
-              shrinkWrap: true,
-              separatorBuilder: (context, index) {
-                return Divider();
-              },
-              itemBuilder: (context, index) {
-                return Post();
-              },
-            ),
-          ),
-        ],
-      ),
+      body:HomeScreen()
     );
   }
 }
